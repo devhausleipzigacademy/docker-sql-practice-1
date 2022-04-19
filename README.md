@@ -88,9 +88,6 @@ CREATE TABLE test (
     label VARCHAR(255) NOT NULL
 );
 
-DROP TABLE menu_item;
-DROP TABLE restaurant;
-
 DROP TABLE test;
 CREATE TABLE restaurant (
     identifier UUID PRIMARY KEY DEFAULT gen_random_uuid(),
