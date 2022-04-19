@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    container_name: pgsql-example-1
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=local_admin
+      - POSTGRES_PASSWORD=unsafeLocalPassword0!
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=main
