@@ -195,14 +195,6 @@ INSERT INTO restaurant (name, founded, cuisine)
     VALUES ('World Peas', '1971-06-13', 'French')
     RETURNING identifier;
 
-DROP TABLE menu_item;
-CREATE TABLE menu_item (
-    identifier UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    name VARCHAR(255) NOT NULL,
-    price NUMERIC,
-    restaurantID UUID REFERENCES restaurant(identifier)
-);
-
 DELETE FROM restaurant
 WHERE name = 'World Peas';
 
