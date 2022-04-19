@@ -188,7 +188,7 @@ CREATE TABLE menu_item (
     identifier UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name VARCHAR(255) NOT NULL,
     price NUMERIC,
-    restaurantID UUID references restaurant(identifier)
+    restaurantID UUID REFERENCES restaurant(identifier)
 );
 
 INSERT INTO restaurant (name, founded, cuisine)
@@ -200,7 +200,7 @@ CREATE TABLE menu_item (
     identifier UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name VARCHAR(255) NOT NULL,
     price NUMERIC,
-    restaurantID UUID references restaurant(identifier)
+    restaurantID UUID REFERENCES restaurant(identifier)
 );
 
 DELETE FROM restaurant
