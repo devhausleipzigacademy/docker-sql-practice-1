@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
     postgresql:
-        image: postgresql:latest
+        image: postgres:latest
         container_name: pgsql-example-1
         ports:
             - "5432:5432"
