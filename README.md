@@ -1,78 +1,84 @@
 # Docker & SQL Practice #1
 
 ## Prerequisites
-- Install the VSCode extension 'SQLTools'
-- Have the Docker driver/daemon running
+
+-   Install the VSCode extension 'SQLTools'
+-   Have the Docker driver/daemon running
 
 ## Vocabulary
-- image
-- container
-- spin up
-- table
-- drop table
-- row/entry
-- primary key, foreign key
-- inner/outer joins
+
+-   image
+-   container
+-   spin up
+-   table
+-   drop table
+-   row/entry
+-   primary key, foreign key
+-   inner/outer joins
 
 ## Docker
-- `docker-compose up`
-- `docker-compose up -d`
-- `docker-compose stop`
+
+-   `docker-compose up`
+-   `docker-compose up -d`
+-   `docker-compose stop`
 
 ## SQL
-- `CREATE TABLE`
-- `INT`
-- `CHAR`
-- `PRIMARY KEY`
-- `DROP TABLE`
-- `SERIAL`
-- `VARCHAR`
-- `NOT NULL`
-- `UUID`
-- `ALTER TABLE`
-- `ADD`
-- `SELECT`
-- `AS`
-- `ORDER BY`
-- `ASC`
-- `DESC`
-- `LIMIT`
-- `WHERE`
-- `DISTINCT`
-- `LIKE`
-- `AND`
-- `OR`
-- `BETWEEN`
-- `IS NULL`
-- `DELETE`
-- `UPDATE`
-- `SET`
-- `JOIN`
-- `LEFT JOIN`
-- `HAVING`
+
+-   `CREATE TABLE`
+-   `INT`
+-   `CHAR`
+-   `PRIMARY KEY`
+-   `DROP TABLE`
+-   `SERIAL`
+-   `VARCHAR`
+-   `NOT NULL`
+-   `UUID`
+-   `ALTER TABLE`
+-   `ADD`
+-   `SELECT`
+-   `AS`
+-   `ORDER BY`
+-   `ASC`
+-   `DESC`
+-   `LIMIT`
+-   `WHERE`
+-   `DISTINCT`
+-   `LIKE`
+-   `AND`
+-   `OR`
+-   `BETWEEN`
+-   `IS NULL`
+-   `DELETE`
+-   `UPDATE`
+-   `SET`
+-   `JOIN`
+-   `LEFT JOIN`
+-   `HAVING`
 
 ## Why UUIDs instead of auto-incrementing integers for primary keys?
 
 ### Positives
-- Security: Externals cannot guess IDs and cannot infer number of records from new inserts.
-- Flexibility: You can better interoperate with distributed system-based tools/services that work with flat collections of objects that must have unique IDs.
+
+-   Security: Externals cannot guess IDs and cannot infer number of records from new inserts.
+-   Flexibility: You can better interoperate with distributed system-based tools/services that work with flat collections of objects that must have unique IDs.
 
 ### Negatives
-- Space: UUIDs take up more space than integers. However, modern systems have a lot of RAM and there are sophisticated caching strategies available.
-- Performance?: In some SQL implementations, UUIDs can reduce the performance of indices (not applicable to PostgreSQL).
+
+-   Space: UUIDs take up more space than integers. However, modern systems have a lot of RAM and there are sophisticated caching strategies available.
+-   Performance?: In some SQL implementations, UUIDs can reduce the performance of indices (not applicable to PostgreSQL).
 
 Default to using UUIDs unless you encounter performance issues and understand how to manage the security implications of using auto-incrementing integers.
 
 ## Resources
-- [VSCode SQLTools Docs](https://vscode-sqltools.mteixeira.dev/)
-- [Docker Compose Docs](https://docs.docker.com/compose/)
-- [Bitnami PostgreSQL Images](https://hub.docker.com/r/bitnami/postgresql/)
-- [PostgreSQL Docs](https://www.postgresql.org/docs/14/index.html)
-- [PostgreSQL Auto-incrementing Integer Key](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-serial/)
-- [SQL UUIDS & Background Info](https://arctype.com/blog/postgres-uuid/)
-- [PostgreSQL Alter Table](https://www.postgresql.org/docs/14/sql-altertable.html)
-- [PostgreSQL Operators & Functions](https://www.postgresql.org/docs/14/functions.html)
-- [PostgreSQL Having](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-having/)
+
+-   [VSCode SQLTools Docs](https://vscode-sqltools.mteixeira.dev/)
+-   [Docker Compose Docs](https://docs.docker.com/compose/)
+-   [PostgreSQL Docs](https://www.postgresql.org/docs/14/index.html)
+-   [PostgreSQL Auto-incrementing Integer Key](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-serial/)
+-   [SQL UUIDS & Background Info](https://arctype.com/blog/postgres-uuid/)
+-   [PostgreSQL Alter Table](https://www.postgresql.org/docs/14/sql-altertable.html)
+-   [PostgreSQL Operators & Functions](https://www.postgresql.org/docs/14/functions.html)
+-   [PostgreSQL Having](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-having/)
 
 ## Reference
 
